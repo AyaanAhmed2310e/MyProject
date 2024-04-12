@@ -19,31 +19,34 @@
     </head>
     <body>
         <!-- Nabar Start -->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <h1 class="navbar-brand" href="#">Nike</h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" id="navbar" style="color: #FF0000;" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="navbar" style="color: #FF0000;" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" id="navbar" style="color: #FF0000;" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="navbar" style="color: #FF0000;" href="team.html">Our Team</a>
-                    </li>
-                    <input placeholder="Search" class="input" name="text" type="text">
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container">
+              <h1 class="navbar-brand" href="#">Nike</h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="Navbar">
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html"><ion-icon name="home-outline" id="homeicon"></ion-icon><p id="home">Home</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link " href="about.html"><ion-icon name="alert-outline" id="abouticon"></ion-icon><p id="about">About</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" href="contact.html"><ion-icon name="call-outline" id="chaticon"></ion-icon><p id="chat">Chat</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="team.html"><ion-icon name="person-outline" id="teamicon"></ion-icon><p id="team">Team</p></a>
+                      </li>
+                      <div id="marker"><span></span></div>
+                      <div id="marker1"><span></span></div>
+                      <div id="marker2"><span></span></div>
+                      <div id="marker3"><span></span></div>
+                  </ul>
+              </div>
+          </div>
+      </nav>
     <!-- Nabar End -->
     <!-- BG Start -->
     <!-- Carousel -->
@@ -238,5 +241,59 @@
             crossorigin="anonymous"
         ></script>
         <script src="JS/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#home").hide()
+    $("#homeicon").hover(function(){
+      $("#home").toggle(function(){
+        $("#home").animate({display: "block"})
+      })
+      $("#marker").hover(function(){
+      $("#home").toggle(function(){
+        $("#home").animate({display: "block"})
+      })
+    })
+    })
+    
+    $("#about").hide()
+    $("#abouticon").hover(function(){
+      $("#about").toggle(function(){
+        $("#about").animate({display: "block"})
+      })
+    })
+    $("#marker").hover(function(){
+      $("#about").toggle(function(){
+        $("#about").animate({display: "block"})
+      })
+    })
+    
+    $("#chat").hide()
+    $("#chaticon").hover(function(){
+      $("#chat").toggle(function(){
+        $("#chat").animate({display: "block"})
+      })
+    })
+    $("#marker").hover(function(){
+      $("#chat").toggle(function(){
+        $("#chat").animate({display: "block"})
+      })
+    })
+    
+    $("#team").hide()
+    $("#teamicon").hover(function(){
+      $("#team").toggle(function(){
+        $("#team").animate({display: "block"})
+      })
+    })
+    $("#marker").hover(function(){
+      $("#team").toggle(function(){
+        $("#team").animate({display: "block"})
+      })
+    })
+    })
+    </script>
     </body>
 </html>
